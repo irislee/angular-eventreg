@@ -8,7 +8,13 @@
 </head>
 <body>
   <div class="container">
-    
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="/NewEvent.html">Create Event</a></li>
+        </ul>
+      </div>
+    </div>
     <div ng-controller="EventController" style="padding: 0 20px;">
       <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" title="{{event.name}}">
       <div class="row">
