@@ -19,25 +19,38 @@ eventsApp.controller('EventController',
           creatorName: 'Bob',
           duration: '1 hr',
           level: 'Advanced',
-          abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+          abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+          upVoteCount: 0
         },
         {
           name: 'Scopes for fun and profit',
           creatorName: 'John',
           duration: '30 mins',
           level: 'Introductory',
-          abstract: 'Accusamus consectetur iure, sequi rem voluptas impedit dolore.'
+          abstract: 'Accusamus consectetur iure, sequi rem voluptas impedit dolore.',
+          upVoteCount: 0
         },
         {
           name: 'Well Behaved Controllers',
           creatorName: 'Molly',
           duration: '2 hrs',
           level: 'Intermediate',
-          abstract: 'Nemo adipisci incidunt iure iusto tenetur voluptatibus ducimus.'
+          abstract: 'Nemo adipisci incidunt iure iusto tenetur voluptatibus ducimus.',
+          upVoteCount: 0
         }
       ]
-    }
+    };
+
+    $scope.upVoteSession = function(session) {
+      session.upVoteCount++;
+    };
+
+    $scope.downVoteSession = function(session) {
+      session.upVoteCount--;
+    };
 
   }
+
+
 
 );
